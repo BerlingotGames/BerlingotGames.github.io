@@ -10,8 +10,6 @@ var utils = {
 
 };
 
-// basic setup  :)
-
 canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 W = canvas.width = window.innerWidth;
@@ -30,22 +28,14 @@ function Shape(x, y, text) {
 }
 
 Shape.prototype.getValue = function () {
-    console.log("get black pixels position");
-
-//  Draw the shape :^)
-
     ctx.textAlign = "center";
     ctx.font = "bold " + this.size + "px arial";
     ctx.fillText(this.text, this.x, this.y);
 
-//  get the data
-
     var data = ctx.getImageData(0, 0, W, H);
 
-//  use a 32-bit buffer as we are only checking if a pixel is set or not
     var buffer32 = new Uint32Array(data.data.buffer);
 
-//  Loop through the image
     for (var y = 0; y < H; y += gridY) {
         for (var x = 0; x < W; x += gridX) {
             if (buffer32[y * W + x]) {
@@ -56,12 +46,7 @@ Shape.prototype.getValue = function () {
     ctx.clearRect(0, 0, W, H);
 };
 
-colors = [
-    '#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5',
-    '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50',
-    '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800',
-    '#FF5722'
-];
+colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'];
 
 function Particle(x, y) {
     this.radius = 1.1;
@@ -141,13 +126,13 @@ function Particle(x, y) {
 
 }
 
-var messageValue = "Berlingot Games";
+var messageValue = "BerlingotGames";
 var gravity = parseFloat("0");
 var duration = parseFloat(".4");
 var speed = parseFloat(".1");
 var radius = parseFloat(".1");
 
-var message = new Shape(W / 2, H / 2 + 50, messageValue);
+var message = new Shape(W / 2, H / 4, messageValue);
 
 message.getValue();
 

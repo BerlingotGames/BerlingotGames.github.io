@@ -50,7 +50,6 @@ input {
     background-color: transparent;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 h1 {
@@ -79,4 +78,17 @@ input[type="text"] {
     border: 0;
     border-bottom: 2px solid #FF2948;
     text-align: center;
+}
+
+#games {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#games img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
 }
