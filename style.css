@@ -37,4 +37,20 @@ canvas {
 a {
     font-weight: 700;
     text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.inline-image {
+    vertical-align: middle; /* Aligns the image with the middle of the text */
+    max-height: 1em; /* Makes the image height match the text height */
+    width: auto; /* Maintains aspect ratio */
+    margin: 0 5px; /* Adds some space around the image */
 }
