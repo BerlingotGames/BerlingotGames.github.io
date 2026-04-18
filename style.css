@@ -49,8 +49,8 @@ a {
 }
 
 .inline-image {
-    vertical-align: middle; /* Aligns the image with the middle of the text */
-    max-height: 1em; /* Makes the image height match the text height */
-    width: auto; /* Maintains aspect ratio */
-    margin: 0 5px; /* Adds some space around the image */
+    vertical-align: middle;
+    max-height: 1em;
+    width: auto;
+    margin: 0 5px;
 }
